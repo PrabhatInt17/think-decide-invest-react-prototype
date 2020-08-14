@@ -1,0 +1,39 @@
+package com.decision.controller;
+
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.decision.controller.modal.Company;
+import com.decision.controller.modal.CompanyData;
+
+@RestController
+public class DecisionController {
+
+	@GetMapping(value = "/decisions/{sector}", produces = { MediaType.APPLICATION_JSON_VALUE })
+	public List<Company> getDecisions(@PathVariable("sector") String sector) {
+		Predicate<Company> bySector = company -> company.getSector().equalsIgnoreCase(sector);
+		List<Company> companiesBySector = CompanyData.getInitialData().stream().filter(bySector)
+				.collect(Collectors.toList());
+
+		for (Company company : companiesBySector) {
+
+			if (company.getGrowthCurrentMinus1Year() < company.getGrowthCurrentMinus2Year()) {
+				company.setSuggestion("Not Recommended");
+			} else if (company.getGrowthCurrentMinus1Year() > company.getGrowthCurrentMinus2Year()) {
+				company.setSuggestion("Highly Recommended");
+			} else {
+				company.setSuggestion("Recommended");
+			}
+
+		}
+
+		return companiesBySector;
+	}
+
+}

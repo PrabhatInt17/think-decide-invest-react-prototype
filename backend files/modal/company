@@ -1,0 +1,86 @@
+package com.decision.controller.modal;
+
+public class Company {
+
+	private String name;
+	private String sector;
+	private Double growthCurrentMinus1Year;
+	private Double growthCurrentMinus2Year;
+	private String suggestion;
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the sector
+	 */
+	public String getSector() {
+		return sector;
+	}
+
+	/**
+	 * @param sector
+	 *            the sector to set
+	 */
+	public void setSector(String sector) {
+		this.sector = sector;
+	}
+
+	/**
+	 * @return the growthCurrentMinus1Year
+	 */
+	public Double getGrowthCurrentMinus1Year() {
+		return growthCurrentMinus1Year;
+	}
+
+	/**
+	 * @param growthCurrentMinus1Year
+	 *            the growthCurrentMinus1Year to set
+	 */
+	public void setGrowthCurrentMinus1Year(Double growthCurrentMinus1Year) {
+		this.growthCurrentMinus1Year = growthCurrentMinus1Year;
+	}
+
+	/**
+	 * @return the growthCurrentMinus2Year
+	 */
+	public Double getGrowthCurrentMinus2Year() {
+		return growthCurrentMinus2Year;
+	}
+
+	/**
+	 * @param growthCurrentMinus2Year
+	 *            the growthCurrentMinus2Year to set
+	 */
+	public void setGrowthCurrentMinus2Year(Double growthCurrentMinus2Year) {
+		this.growthCurrentMinus2Year = growthCurrentMinus2Year;
+	}
+
+	/**
+	 * @return the suggestion
+	 */
+	public String getSuggestion() {
+		return suggestion;
+	}
+
+	/**
+	 * @param suggestion
+	 *            the suggestion to set
+	 */
+	public void setSuggestion(String suggestion) {
+		this.suggestion = suggestion;
+	}
+
+}

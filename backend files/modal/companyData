@@ -1,0 +1,39 @@
+package com.decision.controller.modal;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CompanyData {
+
+	private CompanyData() {
+
+	}
+
+	public static List<Company> getInitialData() {
+		List<Company> companies = new ArrayList<>();
+
+		companies.add(populateCompany("Google", "Information Technology", 10.0, 8.0));
+		companies.add(populateCompany("Apple", "Information Technology", 10.0, 11.00));
+		companies.add(populateCompany("Microsoft", "Information Technology", 5.0, 5.0));
+		companies.add(populateCompany("Ambuja", "Development", 10.0, 8.0));
+		companies.add(populateCompany("Birla Shakti", "Development", 10.0, 13.00));
+		companies.add(populateCompany("Paragon", "Footwear", 10.0, 9.0));
+		companies.add(populateCompany("Relaxo", "Footwear", 10.0, 10.0));
+		companies.add(populateCompany("Lakhani", "Footwear", 8.0, 6.0));
+
+		return companies;
+	}
+
+	private static Company populateCompany(String name, String sector, Double growthCurrentMinus1Year,
+			Double growthCurrentMinus2Year) {
+		Company company = new Company();
+
+		company.setGrowthCurrentMinus1Year(growthCurrentMinus1Year);
+		company.setGrowthCurrentMinus2Year(growthCurrentMinus2Year);
+		company.setName(name);
+		company.setSector(sector);
+
+		return company;
+	}
+
+}
