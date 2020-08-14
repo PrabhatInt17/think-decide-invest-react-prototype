@@ -1,0 +1,97 @@
+body {
+  background: url('./assets/login-bkgd.jpg');
+  background-position: right;
+}
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 72px;
+  background: linear-gradient(90deg, rgba(70, 196, 43, 1) 70%, rgba(159, 202, 42, 1) 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: yellowgreen;
+}
+
+#root {
+  padding: 1em;
+  box-shadow: 0px 0px 5px 0px rgb(113, 126, 168);
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+form {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.details-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  height: 3em;
+  width: 20em;
+  margin: 0 1em;
+  border-radius: 3px;
+}
+
+button {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(113, 238, 140, 1) 10%, rgba(105, 223, 196, 1) 100%);
+}
+
+.company-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: antiquewhite;
+  margin: 1rem;
+  border: 1px solid white;
+  box-shadow: 0px 0px 5px 0px rgb(47, 226, 226);
+  background: linear-gradient(90deg, rgba(113, 238, 140, 1) 10%, rgba(105, 223, 196, 1) 100%);
+}
+
+.company-details-table {
+  border: solid thin;
+  border-collapse: collapse;
+  color: rgb(35, 66, 104);
+}
+
+.company-details-table th,
+.company-details-table td {
+  border: solid thin;
+  padding: 0.5rem 2rem;
+}
+.company-details-table td {
+  white-space: nowrap;
+  border-style: none solid;
+  vertical-align: top;
+}
+.company-details-table th {
+  font-weight: bold;
+  padding: 0.2em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.not-recommended {
+  color: red;
+}
+
+.highly-recommended {
+  color: blue;
+}
+
+.recommended {
+  color: blueviolet;
+}
